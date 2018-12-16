@@ -1,0 +1,37 @@
+.ctrl-btn {
+  display: block;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 5px;
+  margin: auto auto 5px;
+  cursor: pointer;
+}
+
+.ctrl-btn:focus {
+  outline: none;
+}
+
+.game-text-container {
+  text-align: center;
+  margin-bottom: 27px;
+}
+
+.game-text-container .game-text {
+  border: 2px solid black;
+  padding: 2px;
+  border-radius: 4px;
+}
+
+.remaining-time {
+  text-align: center;
+  margin-bottom: 2px;
+  margin-top: 10px;
+  color: red;
+  font-family: fantasy;
+}
+
+.game-finish-message {
+  height: 37px;
+  display: flex;
+  align-items: center;
+}
