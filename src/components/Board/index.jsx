@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
+// External helpers
 import isEqual from "lodash/isEqual";
 
+// Components
 import Card from "../Card";
-
-import styles from "./styles.css";
 
 class Board extends Component {
   static propTypes = {
@@ -17,6 +17,7 @@ class Board extends Component {
     cardHiddenImage: PropTypes.string,
     isDisabled: PropTypes.bool,
 
+    // Functions
     onCardClick: PropTypes.func
   };
 
@@ -27,11 +28,7 @@ class Board extends Component {
   // We dont use Pure component because dimensions props object is created on every render
   // so the reference changes even if the dimensions height and width are the same
   shouldComponentUpdate(nextProps) {
-    if (isEqual(this.props, nextProps)) {
-      return false;
-    }
-
-    return true;
+    return !isEqual(this.props, nextProps);
   }
 
   render() {
@@ -44,10 +41,7 @@ class Board extends Component {
     } = this.props;
 
     return (
-      <div
-        className={styles["cards-container"]}
-        style={{ width: width, height: height }}
-      >
+      <div style={{ width: width, height: height }}>
         {cardsInfo.map(({ id, image, isFlipped, isSolved }, index) => (
           <Card
             key={id}

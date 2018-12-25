@@ -15,7 +15,7 @@ export const gameTimeInSeconds = 90;
 
 export const gameFinishMessage = {
   win: "Congrats! You win !",
-  lose: "You lost, you can try again ..."
+  lose: "You lose, you can try again ..."
 };
 
 export const allStatus = {

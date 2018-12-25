@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from "react";
 import uuid from "uuid/v4";
+
+// External helpers
 import _debounce from "lodash/debounce";
 
 import {

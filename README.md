@@ -1,9 +1,10 @@
-# Project Title
+# React memory game
 
 Simple Memory Game with ReactJs, made just for fun.
 
-Check live: https://react-memory-game-0.herokuapp.com/
+Check live(wait some sec for page to load): https://react-memory-game-0.herokuapp.com/
 
+![](game.gif)
 ## Installing
 
 1) npm install or yarn install
@@ -12,7 +13,8 @@ Check live: https://react-memory-game-0.herokuapp.com/
 ## Features
 
 - Timer
-- Place cards on random positions every time game starts
+- Cards are placed on random positions every time game starts
+- use of shouldComponentUpdate to optimize re-renders
 
 ### License
 

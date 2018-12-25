@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
+// External helpers
 import _isEqual from "lodash/isEqual";
 import _noop from "lodash/noop";
+import cn from "classnames";
 
 import styles from "./index.module.css";
 
@@ -31,11 +33,7 @@ class Card extends Component {
   };
 
   shouldComponentUpdate(nextProps) {
-    if (_isEqual(this.props, nextProps)) {
-      return false;
-    }
-
-    return true;
+    return !_isEqual(this.props, nextProps);
   }
 
   handleClick = () => {
@@ -56,9 +54,9 @@ class Card extends Component {
 
     return (
       <div
-        className={`${styles["flip-card"]} ${
-          isFlipped || isSolved ? styles["is-flipped"] : ""
-        }`}
+        className={cn(styles["flip-card"], {
+          [styles["is-flipped"]]: isFlipped || isSolved
+        })}
         style={{ width, height }}
         onClick={this.handleClick}
       >
